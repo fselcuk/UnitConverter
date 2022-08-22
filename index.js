@@ -24,3 +24,16 @@ convertBtn.addEventListener("click", function() {
     massEl.textContent = `${baseValue} kilos = ${(baseValue * kiloToPound).toFixed(3)} pounds | ${baseValue} pounds =  ${(baseValue / kiloToPound).toFixed(3)} kilos`
      
 })
+
+inputEl.addEventListener("keyup", e=>{
+    if(e.key==="Enter"){
+        
+        let baseValue = inputEl.value
+    
+        lengthEl.textContent = `${baseValue} meters = ${(baseValue * meterToFeet).toFixed(3)} feet | ${baseValue} feet =  ${(baseValue / meterToFeet).toFixed(3)} feet`
+        
+        volumeEl.textContent = `${baseValue} liters = ${(baseValue * literToGallon).toFixed(3)} gallons | ${baseValue} gallons =  ${(baseValue / literToGallon).toFixed(3)} liters`
+        
+        massEl.textContent = `${baseValue} kilos = ${(baseValue * kiloToPound).toFixed(3)} pounds | ${baseValue} pounds =  ${(baseValue / kiloToPound).toFixed(3)} kilos`
+         }
+        })
